@@ -6,14 +6,14 @@
     --mobile-width: 375px;
 
     /* ### Primary */
-    --Strong-cyan: hsl(172, 67%, 45%);
+    --primary-strong-cyan: hsl(172, 67%, 45%);
 
     /* ### Neutral ### */
-    --Very-dark-cyan: hsl(183, 100%, 15%);
-    --Dark-grayish-cyan: hsl(186, 14%, 43%);
-    --Grayish-cyan: hsl(184, 14%, 56%);
-    --Light-grayish-cyan: hsl(185, 41%, 84%);
-    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --neutral-very-dark-cyan: hsl(183, 100%, 15%);
+    --neutral-dark-grayish-cyan: hsl(186, 14%, 43%);
+    --neutral-grayish-cyan: hsl(184, 14%, 56%);
+    --neutral-light-grayish-cyan: hsl(185, 41%, 84%);
+    --neutral-very-light-grayish-cyan: hsl(189, 41%, 97%);
     --White: hsl(0, 0%, 100%);
 
     /* ### Font ### */
@@ -23,11 +23,193 @@
 
 }
 
+.attribution { margin-top: 50px; font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
 body {
     font-family: var(--font-family);
     font-weight: var(--font-weight-normal);
     font-size: var(--font-size-normal);
+    background-color: var(--neutral-light-grayish-cyan);
 }
 
-.attribution { margin-top: 50px; font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+header {
+    text-align: center;
+    color: var(--neutral-very-dark-cyan);
+}
+
+h1 {
+    font-size: 1.3rem;
+    letter-spacing: 10px;
+}
+
+h2 {
+    font-size: 1rem;
+    color: var(--neutral-dark-grayish-cyan);
+}
+
+.app-container {
+    max-width: 900px;
+    min-height: 400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-items: stretch;
+    background-color: var(--White);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+/* ========== */
+/* input area */
+/* ========== */
+.input {
+    padding: 20px;   
+}
+
+.input form {
+    display: grid;
+    /* justify-content: center; */
+    gap: 10px;
+    height: 100%;
+}
+
+.form-field {
+    display: block;
+}
+
+/* bill total */
+#bill + label {
+    display: none;
+}
+
+#bill {
+    width: 100%;
+    font-size: var(--font-size-normal);
+    font-family: var(--font-family);
+    color: var(--neutral-very-dark-cyan);
+    font-weight: var(--font-weight-normal);
+    background-color: var(--neutral-very-light-grayish-cyan);
+    border: none;
+    padding: 10px;
+    text-align: end;
+}
+
+
+/* tip amount */
+#tip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+#tip input[type="radio"] {
+    display: none;
+}
+
+#tip input[type="radio"] + label {
+    min-width: 100px;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: var(--neutral-very-dark-cyan);
+    color: var(--White);
+}
+
+#tip input[type="radio"] + label:hover {
+    background-color: var(--neutral-light-grayish-cyan);
+    color: var(--neutral-very-dark-cyan);
+}
+
+#tip input[type="radio"]:checked + label {
+    background-color: var(--primary-strong-cyan);
+}
+
+/* Cusotm tip */
+#tip input[type="number"] + label {
+    display: none;
+}
+
+#tip input[type="number"] {
+    font-size: var(--font-size-normal);
+    font-family: var(--font-family);
+    color: var(--neutral-very-dark-cyan);
+    font-weight: var(--font-weight-normal);
+    min-width: 100px;
+    text-align: center;
+}
+
+/* Number of People */
+#people + label {
+    display: none;
+}
+
+#people {
+    width: 100%;
+    font-size: var(--font-size-normal);
+    font-family: var(--font-family);
+    color: var(--neutral-very-dark-cyan);
+    font-weight: var(--font-weight-normal);
+    background-color: var(--neutral-very-light-grayish-cyan);
+    border: none;
+    padding: 10px;
+    text-align: end;
+}
+
+
+/* =========== */
+/* output area */
+/* =========== */
+.output {
+    display: grid;
+    background-color: var(--neutral-very-dark-cyan);
+    color: var(--White);
+    padding: 30px;
+    border-radius: 20px;
+    align-content: space-between;
+}
+
+.items {
+    display: grid;
+    gap: 20px;
+}
+
+.output-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.output-label {
+    font-size: 1rem;
+}
+
+.sub {
+    color: var(--neutral-light-grayish-cyan);
+    font-size: 0.8rem;
+}
+
+.output-value {
+    color: var(--primary-strong-cyan);
+    font-size: 3rem;
+}
+
+.output-button {
+    height: 50px;
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-normal);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    background-color: var(--primary-strong-cyan);
+    color: var(--neutral-very-dark-cyan);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.output-button:hover {
+    filter: brightness(120%);
+}

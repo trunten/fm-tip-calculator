@@ -9,30 +9,68 @@
   <title>Frontend Mentor | Tip calculator app</title>
 </head>
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
+  <header><h1>SPLI<br>TTER</h1></header>
+  <div class="app-container">
+    <div class="input">
+      <form>
+        <div class="form-group">
+          <h2>Bill</h2>
+          <input class="form-field" type="number" name="bill amount" id="bill" min="0" placeholder="0">
+          <label for="bill">Bill</label>
+        </div>
+        <div class="form-group">
+          <h2>Select Tip %</h2>
+          <div id="tip" class="tip">
+            <input type="radio" name="tip amount" id="5">
+            <label for="5">5%</label>
+            <input type="radio" name="tip amount" id="10">
+            <label for="10">10%</label>
+            <input type="radio" name="tip amount" id="15">
+            <label for="15">15%</label>
+            <input type="radio" name="tip amount" id="25">
+            <label for="25">25%</label>
+            <input type="radio" name="tip amount" id="50">
+            <label for="50">50%</label>
+            <input type="number" name="tip amount" id="custom" placeholder="Custom" min="0" max="100">
+            <label for="custom">Custom</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <h2>Number of People</h2>
+          <input class="form-field" type="number" name="people" id="people" min="1" placeholder="1">
+          <label for="people">Number of People</label>
+        </div>
+      </form>
+    </div>
+    <div class="output">
+      <div class="items">
+        <div class="output-item">
+          <div class="output-label">
+            <span class="main">Tip Amount</span><br>
+            <span class="sub">/ person</span>
+          </div>
+          <div class="output-value">
+              $0.00
+          </div>
+        </div>
+        <div class="output-item">
+          <div class="output-label">
+            <span class="main">Total</span><br>
+            <span class="sub">/ person</span>
+          </div>
+          <div class="output-value">
+            $0.00
+          </div>
+        </div>
+      </div>
+      <button class="output-button">
+        Reset
+      </button>
+    </div>
+  </div>
   
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/trunten" target="_blank">Jonathan</a>.
   </div>
 </body>
 </html>
